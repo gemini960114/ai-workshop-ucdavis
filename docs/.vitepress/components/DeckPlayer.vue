@@ -34,6 +34,7 @@ const slides = [
     subtitle: 'Just one sentence: 15 brain MRI scans analyzed on Nano4 (FreeSurfer + Slurm)',
     img: '/slides/slide-04.png',
     videoLocal: '/videos/nano4-mri-demo.mp4',
+    vttLocal: '/videos/nano4-mri-demo.en.vtt',
     notes: "NCHC provides supercomputers to physicians, scientists, and researchers. Here is an example of what they can do with an AI agent. A researcher gives just one sentence, and the agent analyzes 15 brain MRI scans on our Nano4 supercomputer. This is for epilepsy pre-surgical evaluation, using FreeSurfer and the Slurm scheduler. The researcher does not write the commands by hand. Please watch how much the agent does for them."
   },
   {
@@ -42,86 +43,50 @@ const slides = [
     title: 'What Is Generative AI?',
     subtitle: "Part 1: Inside the Agent's Brain — and why it can make mistakes",
     img: '/slides/slide-05.png',
-    notes: "You just saw an AI agent analyze 15 brain MRI scans from one sentence. How does that actually work? An AI agent has two parts: a brain that thinks, and tools that act. First, let's look inside the brain—generative AI. In one sentence, it is a very powerful word-chain game. Let me show you how it works, and why it can sometimes make mistakes."
+    videoLocal: '/videos/genai-brain.mp4',
+    vttLocal: '/videos/genai-brain.en.vtt',
+    notes: "You just saw an AI agent analyze 15 brain MRI scans from one sentence. How does that actually work? An AI agent has two parts: a brain that thinks, and tools that act. Let's watch this short video (2:36) to look inside Part 1—the brain, generative AI—and see how it plays word chain, why it rolls the dice, and why it can sometimes make mistakes."
   },
   {
     num: 6,
     part: 'Part 2 · Part 1 of the Agent: The Brain (Generative AI)',
-    title: 'Word Chain (Next Token Prediction)',
-    subtitle: 'Encoding words into token numbers and decoding the predicted next token',
+    title: 'Artificial Analysis Intelligence Index (2026-11-12)',
+    subtitle: 'Top models come from multiple providers — no single winner for every job',
     img: '/slides/slide-06.png',
-    notes: "Computers cannot read words, only numbers. So every word is turned into a number using a dictionary. These pieces are called tokens. GPT-3's dictionary has about 50 thousand tokens, GPT-4 about 100 thousand, and GPT-5 about 150 thousand. In this example, 'Taiwan's best' becomes three numbers. The model predicts the next number, 14221, and we decode it back into a word: 'food'."
+    notes: "Here is the chart from the end of the video, ranking many models with one independent index dated 2026-11-12. Notice that the top scores come from a few different companies, and they are close to each other. Open-weight models, whose weights anyone can download, sit a bit lower. There is no single winner for every job—so remember our rule: use more than one model, and let them check each other."
   },
   {
     num: 7,
-    part: 'Part 2 · Part 1 of the Agent: The Brain (Generative AI)',
-    title: 'Generative AI Creates Content by Word Chain!',
-    subtitle: 'Generating one token at a time until END',
-    img: '/slides/slide-07.png',
-    notes: "So generative AI answers by playing word chain. We ask, 'What is Taiwan's tallest mountain?' The model predicts 'Yu'. We add 'Yu' to the question and ask again. It predicts 'shan'. We add it again, and now it predicts END, so it stops. It writes one small piece at a time."
-  },
-  {
-    num: 8,
-    part: 'Part 2 · Part 1 of the Agent: The Brain (Generative AI)',
-    title: 'Why Are the Answers Different Every Time?',
-    subtitle: 'Scoring thousands of candidate tokens and rolling the dice',
-    img: '/slides/slide-08.png',
-    notes: "At each step, the model does not have just one choice. It scores thousands of possible next words. The bars show how likely each word is. Then the model rolls a dice among the likely ones. So the answer could start with 'Yu', 'It', or 'The'."
-  },
-  {
-    num: 9,
-    part: 'Part 2 · Part 1 of the Agent: The Brain (Generative AI)',
-    title: 'This Is Why Answers Differ Every Time — and May Include Hallucinations',
-    subtitle: 'Token probability distribution across 150K choices',
-    img: '/slides/slide-09.png',
-    notes: "This is why the answer is different every time. It is also why mistakes can appear. We call them hallucinations. One unlucky word can be chosen, and every later word follows it. The lesson is simple: AI sounds confident, but we must check its work."
-  },
-  {
-    num: 10,
-    part: 'Part 2 · Part 1 of the Agent: The Brain (Generative AI)',
-    title: 'Artificial Analysis Intelligence Index (2026-11-12)',
-    subtitle: 'Top models come from multiple providers — no single winner for every job',
-    img: '/slides/slide-10.png',
-    notes: "How do we know which AI is good? This chart ranks many models with one independent index, dated 2026-11-12. Notice that the top scores come from a few different companies, and they are close to each other. Open-weight models, whose weights anyone can download, sit a bit lower. There is no single winner for every job. Keep this in mind for later: use more than one model."
-  },
-  {
-    num: 11,
     part: 'Part 3 · Part 2 of the Agent: Tools to Act (Agentic AI)',
     title: 'So What Is Agentic AI?',
     subtitle: 'Part 2: Giving the Brain a Suit of Tools to Act',
-    img: '/slides/slide-11.png',
-    notes: "Now we know how the brain works: it plays word chain, and different models have different strengths. But a brain alone—like a web chatbot—only talks. How did our supercomputer demo actually open files and run programs? That brings us to Part 2: Agentic AI—giving the brain a suit of tools so it can act: reading files, running programs, and checking results. Let's see how it is built."
+    img: '/slides/slide-07.png',
+    videoLocal: '/videos/agentic-tools.mp4',
+    vttLocal: '/videos/agentic-tools.en.vtt',
+    notes: "Now we know how the brain works: it plays word chain, and different models have different strengths. But a brain alone—like a web chatbot—only talks. Let's watch Part 2 (1:59) to see how Agentic AI gives the brain a suit of tools so it can open files, run programs, and fix its own mistakes."
   },
   {
-    num: 12,
-    part: 'Part 3 · Part 2 of the Agent: Tools to Act (Agentic AI)',
-    title: 'What Is Agentic? Brain + Tools = AI Agent',
-    subtitle: 'ChatGPT (Brain) + Codex (Tools) = AI Agent, just like Tony Stark + Iron Man Suit',
-    img: '/slides/slide-12.png',
-    notes: "Think of Iron Man. Tony Stark is the brain. The Iron Man suit gives him tools and power. Together they make a hero. In AI, ChatGPT is the brain, and Codex is the suit. The suit lets the brain open files, run code, and fix its own mistakes. The agent works in a loop: think, use a tool, look at the result, and think again. Brain plus tools makes an agent."
-  },
-  {
-    num: 13,
+    num: 8,
     part: 'Part 3 · Part 2 of the Agent: Tools to Act (Agentic AI)',
     title: "Three Agentic Tools: Don't Trust Just One",
     subtitle: 'ChatGPT + Codex · Gemini + Antigravity · Claude + Claude Code',
-    img: '/slides/slide-13.png',
-    notes: "There are three big families. Each one pairs a brain with a suit, just like the superheroes on this slide. ChatGPT with Codex is Iron Man. Gemini with Antigravity is Captain America. Claude with Claude Code is Doctor Strange. Each hero has strengths and blind spots. So here is our rule for this course: do not trust just one hero. In our hands-on units today, we will mainly use Antigravity and Claude Code on your laptop—letting one agent do the work and another agent check it."
+    img: '/slides/slide-08.png',
+    notes: "Here are the three big families from the video—each pairing a brain with a suit of tools: ChatGPT with Codex is Iron Man, Gemini with Antigravity is Captain America, and Claude with Claude Code is Doctor Strange. Each hero has strengths and blind spots, so do not trust just one hero. In our hands-on units today, we will mainly use Antigravity and Claude Code on your laptop—letting one agent do the work and another agent check it."
   },
   {
-    num: 14,
+    num: 9,
     part: 'Part 4 · Bring the Agent into Your Laptop (Unit 00)',
     title: 'How Can These AI Agents Do Research with You?',
     subtitle: 'Read papers · Process data & documents · Cross-check results · Build your own Skills',
-    img: '/slides/slide-14.png',
+    img: '/slides/slide-09.png',
     notes: "At the start, we saw an agent run brain MRI analysis on a supercomputer. What about your everyday work on your own laptop? Researchers spend hours reading papers, turning data into Excel sheets and slides, processing routine documents, and checking results. So how can these agents work with you on your laptop? Two ideas. First, bring the agent's brain to your laptop. Second, use more than one agent and turn what works into reusable Skills. Let's start with a simple example in Unit 00."
   },
   {
-    num: 15,
+    num: 10,
     part: 'Part 4 · Bring the Agent into Your Laptop (Unit 00)',
     title: 'Unit 00 | Cloud vs. Local: One Paper, Two Ways to Use AI',
     subtitle: 'Web chat vs. local IDE, checked by a second AI',
-    img: '/slides/slide-15.png',
+    img: '/slides/slide-10.png',
     youtubeId: 'sLCBtmZAz2c',
     unitLink: './00_cloud_vs_local',
     unitLabel: 'Open Unit 00 Guide',
@@ -141,19 +106,19 @@ report.docx is the AI agent's write-up of the questions and answers based on mea
 Revise it according to your suggestions and save it under a new file name`
   },
   {
-    num: 16,
+    num: 11,
     part: 'Part 5 · From Tool to Skill (Units 01–04)',
     title: '🧭 Your Learning Path (From Tool to Skill · Units 01–04)',
     subtitle: '1. TOOL (Unit 01) → 2. SKILL (Unit 02) → 3. MORE SKILLS (Unit 03) → 4. BUILD (Unit 04)',
-    img: '/slides/slide-16.png',
+    img: '/slides/slide-11.png',
     notes: "Here is the path for the rest of the course. We start with the tool: Unit 01, an agent you talk to in plain language. Then skills. In Unit 02 we add one skill and see the result get better. In Unit 03 we use four skills for office documents. In Unit 04 we build a skill from a workflow that works, and in the bonus part two agents check each other. All along, the habit from Unit 00 stays the same: one agent works, another agent checks. Everything is on the course website, with a written guide and a video for each unit."
   },
   {
-    num: 17,
+    num: 12,
     part: 'Part 5 · From Tool to Skill (Units 01–04)',
     title: '🧰 Unit 01 | Getting Started with Antigravity',
     subtitle: 'Step 1 of 4 · The Tool',
-    img: '/slides/slide-17.png',
+    img: '/slides/slide-12.png',
     youtubeId: '72oCyg8MDLg',
     unitLink: './01_antigravity',
     unitLabel: 'Open Unit 01 Guide',
@@ -168,11 +133,11 @@ Create a hello.html in this folder that displays "Hello Antigravity" and today's
 In this folder, help me build a "Memory Match" card game using the simplest Vite + JS setup: 16 cards arranged randomly; flip two matching cards to clear them, and show move count and timer at the top. When all cards are cleared, display "Congratulations!" and a "Play Again" button. Once finished, start the web server directly and give me the URL so I can click and play.`
   },
   {
-    num: 18,
+    num: 13,
     part: 'Part 5 · From Tool to Skill (Units 01–04)',
     title: '🎨 Unit 02 | Frontend Design',
     subtitle: 'Step 2 of 4 · Skills',
-    img: '/slides/slide-18.png',
+    img: '/slides/slide-13.png',
     youtubeId: '86bsVsh2tXw',
     unitLink: './02_frontend_design',
     unitLabel: 'Open Unit 02 Guide',
@@ -187,11 +152,11 @@ In the directory output/case01/, build a single-page official website (HTML + CS
 Which Skills did you use in this case?`
   },
   {
-    num: 19,
+    num: 14,
     part: 'Part 5 · From Tool to Skill (Units 01–04)',
     title: '📄 Unit 03 | Office Document Processing',
     subtitle: 'Step 3 of 4 · More Skills (docx, pdf, pptx, xlsx)',
-    img: '/slides/slide-19.png',
+    img: '/slides/slide-14.png',
     youtubeId: 'sOIg3osiPU4',
     unitLink: './03_office_skills',
     unitLabel: 'Open Unit 03 Guide',
@@ -206,11 +171,11 @@ Based on output/pmi.xlsx, create a 5-slide presentation saved as output/pmi.pptx
 Based on output/pmi.xlsx, write a Word analysis report saved as output/pmi-report.docx, then convert it to PDF saved as output/pmi-report.pdf with page numbers and a light gray "Course Handout" watermark.`
   },
   {
-    num: 20,
+    num: 15,
     part: 'Part 5 · From Tool to Skill (Units 01–04)',
     title: '🧾 Unit 04 | Voucher OCR to Excel',
     subtitle: 'Step 4 of 4 · Build Your Own Skill (voucher-to-excel)',
-    img: '/slides/slide-20.png',
+    img: '/slides/slide-15.png',
     youtubeId: 'Kq0HLK2kIQg',
     unitLink: './04_voucher_ocr',
     unitLabel: 'Open Unit 04 Guide',
@@ -228,11 +193,11 @@ There are five new invoice PDFs in example_deid, please help me enter these reco
 Please cross-check the PDFs in example_deid/ against record.xlsx and verify whether everything is accurate.`
   },
   {
-    num: 21,
+    num: 16,
     part: 'Part 5 · From Tool to Skill (Units 01–04)',
     title: 'Thank You for Your Attention & Q&A',
     subtitle: 'National Center for High-performance Computing (NCHC), Taiwan',
-    img: '/slides/slide-21.png',
+    img: '/slides/slide-16.png',
     notes: "Thank you for listening. If you remember only one thing today, remember this: use more than one agent, and always check the result. Scan the QR code to download the slides, and now let's take your questions."
   }
 ]
@@ -280,14 +245,25 @@ onUnmounted(() => window.removeEventListener('keydown', onKeydown))
     <div class="deck-stage">
       <video
         v-if="showVideo && current.videoLocal"
+        :key="current.videoLocal"
         class="deck-video"
         :src="withBase(current.videoLocal)"
         :poster="withBase(current.img)"
         controls
         autoplay
-      ></video>
+      >
+        <track
+          v-if="current.vttLocal"
+          kind="captions"
+          srclang="en"
+          label="English"
+          :src="withBase(current.vttLocal)"
+          default
+        />
+      </video>
       <iframe
         v-else-if="showVideo && current.youtubeId"
+        :key="current.youtubeId"
         class="deck-video"
         :src="`https://www.youtube.com/embed/${current.youtubeId}?autoplay=1`"
         title="YouTube video player"
@@ -317,7 +293,7 @@ onUnmounted(() => window.removeEventListener('keydown', onKeydown))
         class="deck-btn deck-btn-video"
         @click="showVideo = !showVideo"
       >
-        {{ showVideo ? '🖼️ Show Slide' : '▶ Watch Demo Video' }}
+        {{ showVideo ? '🖼️ Show Slide' : '▶ Watch Video' }}
       </button>
 
       <a v-if="current.unitLink" class="deck-btn deck-btn-link" :href="current.unitLink">
@@ -434,14 +410,6 @@ onUnmounted(() => window.removeEventListener('keydown', onKeydown))
   border-radius: 8px;
   background: var(--vp-c-bg);
   border-left: 4px solid #15803d;
-}
-.deck-notes-label {
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: #15803d;
-  margin-bottom: 4px;
 }
 .deck-notes-text {
   margin: 0;

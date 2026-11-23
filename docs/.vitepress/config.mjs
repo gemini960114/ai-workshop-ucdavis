@@ -31,7 +31,7 @@ export default defineConfig({
       {
         text: 'Keynote & Overview',
         items: [
-          { text: '🎤 Keynote Presentation (21 Slides)', link: '/guide/keynote' },
+          { text: '🎤 Keynote Presentation (16 Slides)', link: '/guide/keynote' },
           { text: '📖 Course Overview & Setup', link: '/guide/overview' },
         ],
       },

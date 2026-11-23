@@ -7,7 +7,7 @@ hero:
   tagline: "Multiple agents, cross-checked — then build your own Skill. Chat in plain language to read papers, analyze data, process Office documents, and package verified workflows into reusable Skills."
   actions:
     - theme: brand
-      text: 🎤 Keynote Presentation (21 Slides)
+      text: 🎤 Keynote Presentation (16 Slides)
       link: /guide/keynote
     - theme: alt
       text: 🚀 Start Hands-On (Unit 00)
@@ -21,8 +21,8 @@ hero:
 
 features:
   - icon: 🎤
-    title: Keynote Presentation (21 Web Slides)
-    details: Browse all 21 slides from "Bring the AI Agent to your laptop as your research partner" with interactive slide player, full explanations, demo prompts, and the Nano4 15-Brain-MRI supercomputer demo video.
+    title: Keynote Presentation (16 Web Slides)
+    details: Browse all 16 slides from "Bring the AI Agent to your laptop as your research partner" with interactive slide player, explainer videos on Generative AI & Agentic AI, and the Nano4 15-Brain-MRI supercomputer demo.
     link: /guide/keynote
     linkText: Open Keynote Slides
   - icon: ☁️

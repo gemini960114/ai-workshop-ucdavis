@@ -1,0 +1,159 @@
+WEBVTT
+
+00:00:00.800 --> 00:00:03.061
+What is generative AI?
+
+00:00:03.174 --> 00:00:08.453
+An AI agent has two parts:
+a brain that thinks, and tools that act.
+
+00:00:08.757 --> 00:00:10.731
+Today, we look inside the brain.
+
+00:00:11.667 --> 00:00:16.267
+In one sentence, generative AI is
+a very powerful word-chain game.
+
+00:00:16.481 --> 00:00:20.522
+Let's see how it works,
+and why it can sometimes make mistakes.
+
+00:00:21.467 --> 00:00:24.288
+Computers can't read words, only numbers.
+
+00:00:24.328 --> 00:00:27.644
+So every word is turned into a number,
+using a dictionary.
+
+00:00:28.059 --> 00:00:30.051
+These pieces are called tokens.
+
+00:00:31.000 --> 00:00:32.723
+And the dictionaries are big.
+
+00:00:32.979 --> 00:00:36.108
+GPT-3 has about 50,000 tokens.
+
+00:00:36.298 --> 00:00:38.817
+GPT-4, about 100,000.
+
+00:00:38.950 --> 00:00:41.855
+And GPT-5, about 150,000.
+
+00:00:42.800 --> 00:00:45.911
+Here, "Taiwan's best"
+becomes three numbers.
+
+00:00:46.324 --> 00:00:50.064
+The language model predicts
+the next number, 14221,
+
+00:00:50.131 --> 00:00:53.121
+and we decode it back into a word: "food."
+
+00:00:54.067 --> 00:00:55.237
+That's how it answers.
+
+00:00:55.663 --> 00:00:58.480
+We ask, "What is Taiwan's
+tallest mountain?"
+
+00:00:58.729 --> 00:01:00.311
+The model predicts "Yu."
+
+00:01:00.835 --> 00:01:03.776
+We add it to the question
+and ask again: "shan."
+
+00:01:04.214 --> 00:01:08.115
+Add that too,
+and it predicts END, so it stops.
+
+00:01:09.067 --> 00:01:12.615
+But at each step,
+there isn't just one choice.
+
+00:01:12.897 --> 00:01:15.777
+The model scores thousands
+of possible next words,
+
+00:01:15.822 --> 00:01:17.967
+then rolls the dice among the likely ones.
+
+00:01:18.358 --> 00:01:22.046
+So the answer could start
+with "Yu," "It," or "The."
+
+00:01:23.000 --> 00:01:23.867
+Another example.
+
+00:01:23.907 --> 00:01:30.188
+After "Ice," the word "cream" scores 0.5,
+and "tea" scores 0.2.
+
+00:01:30.647 --> 00:01:32.848
+Thousands of others score almost zero.
+
+00:01:33.320 --> 00:01:36.553
+Roll the dice,
+and this time we get "cream."
+
+00:01:37.500 --> 00:01:40.200
+This is why the answer
+is different every time.
+
+00:01:40.708 --> 00:01:42.538
+It's also why mistakes can appear.
+
+00:01:42.677 --> 00:01:44.392
+We call them hallucinations.
+
+00:01:45.333 --> 00:01:49.242
+One unlucky word can be chosen,
+and every later word follows it.
+
+00:01:49.543 --> 00:01:53.888
+Pick "Ali" instead of "Yu," and the
+model confidently writes "Alishan":
+
+00:01:54.109 --> 00:01:55.076
+the wrong mountain.
+
+00:01:56.033 --> 00:02:00.769
+The lesson is simple: AI sounds confident,
+but we must check its work.
+
+00:02:01.733 --> 00:02:04.063
+So how do we know which AI is good?
+
+00:02:04.479 --> 00:02:07.899
+This chart ranks many models
+with one independent index,
+
+00:02:07.974 --> 00:02:10.158
+dated November 12, 2026.
+
+00:02:10.570 --> 00:02:12.750
+The top scores come from
+a few different companies,
+
+00:02:12.790 --> 00:02:14.268
+and they are close to each other.
+
+00:02:15.233 --> 00:02:19.618
+Open-weight models, whose weights
+anyone can download, sit a bit lower.
+
+00:02:19.992 --> 00:02:22.507
+There is no single winner for every job.
+
+00:02:23.467 --> 00:02:29.606
+So remember: generative AI plays word
+chain, rolls the dice, and can be wrong.
+
+00:02:30.237 --> 00:02:33.108
+Use more than one model,
+and let them check each other.
+
+00:02:33.353 --> 00:02:36.650
+Next, we give the brain a suit of tools.

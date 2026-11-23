@@ -1,0 +1,234 @@
+WEBVTT
+
+00:00:00.800 --> 00:00:04.868
+Hi everyone, and welcome to
+NCHC's hands-on AI Agent demo.
+
+00:00:04.868 --> 00:00:06.972
+Today, with just one sentence,
+
+00:00:06.972 --> 00:00:12.302
+an AI Agent runs the brain-image analysis
+of fifteen MRI scans from epilepsy
+
+00:00:12.302 --> 00:00:14.827
+patients on the Nano4 supercomputer.
+
+00:00:15.767 --> 00:00:17.272
+First, some background.
+
+00:00:17.272 --> 00:00:21.394
+Before epilepsy surgery,
+doctors run a pre-surgical evaluation:
+
+00:00:21.394 --> 00:00:26.039
+high-resolution brain MRI is registered
+and analyzed to help locate the
+
+00:00:26.039 --> 00:00:27.283
+epileptogenic zone.
+
+00:00:28.233 --> 00:00:33.115
+The problem: on a hospital computer,
+one scan takes twenty-four hours,
+
+00:00:33.115 --> 00:00:35.555
+so fifteen scans take fifteen days.
+
+00:00:35.555 --> 00:00:38.205
+NCHC's supercomputers are much faster,
+
+00:00:38.205 --> 00:00:41.553
+but every step still has
+to be launched by hand.
+
+00:00:42.500 --> 00:00:45.068
+With an AI Agent, that changes completely.
+
+00:00:45.068 --> 00:00:50.020
+The fifteen scans are already uploaded to
+Nano4, and I give just one instruction:
+
+00:00:50.020 --> 00:00:52.343
+"Please run FreeSurfer on this batch."
+
+00:00:53.300 --> 00:00:58.329
+The batch: fifteen brain MRI scans from
+eight patients under epilepsy evaluation.
+
+00:00:58.329 --> 00:01:03.295
+The view sweeps upward through all eight
+brains at once: brainstem, hippocampus,
+
+00:01:03.295 --> 00:01:05.716
+thalamus, all the way up to the cortex.
+
+00:01:06.667 --> 00:01:10.890
+The Agent first checks the environment
+and confirms that all fifteen scans are
+
+00:01:10.890 --> 00:01:11.377
+complete.
+
+00:01:11.377 --> 00:01:15.384
+Then it proposes a plan: the compute
+resources and the estimated run time,
+
+00:01:15.384 --> 00:01:16.954
+and it waits for my approval.
+
+00:01:17.900 --> 00:01:19.855
+I reply: "Run them all at once."
+
+00:01:19.855 --> 00:01:23.154
+All fifteen go straight into
+Slurm and start together.
+
+00:01:23.154 --> 00:01:26.148
+Then I add:
+"Report progress every five minutes."
+
+00:01:26.148 --> 00:01:28.714
+And it schedules the check-ins on its own.
+
+00:01:29.667 --> 00:01:33.643
+First report: all fifteen are running,
+doing intensity correction.
+
+00:01:33.643 --> 00:01:38.341
+Ten minutes in, skull stripping is done
+and intensity normalization has begun.
+
+00:01:38.341 --> 00:01:40.269
+Every stage is reported clearly.
+
+00:01:41.233 --> 00:01:44.903
+About twenty-six minutes in,
+we log in to Nano4 to take a look:
+
+00:01:44.903 --> 00:01:49.273
+all fifteen jobs are running, and all
+of them are on the same compute node.
+
+00:01:50.233 --> 00:01:50.484
+Why?
+
+00:01:50.484 --> 00:01:55.005
+Each scan needs only a few CPU cores,
+so all fifteen fit on one machine.
+
+00:01:55.005 --> 00:01:55.821
+On that node,
+
+00:01:55.821 --> 00:02:00.719
+FreeSurfer's brain-registration program
+is running on dozens of cores at once.
+
+00:02:01.667 --> 00:02:02.943
+Let's fast-forward.
+
+00:02:02.943 --> 00:02:07.173
+After a little over four hours,
+only one scan is still running.
+
+00:02:07.173 --> 00:02:09.926
+At about six hours, all fifteen are done!
+
+00:02:10.867 --> 00:02:14.710
+The Agent then verifies,
+converts and packages the results,
+
+00:02:14.710 --> 00:02:16.925
+and delivers an acceptance report,
+
+00:02:16.925 --> 00:02:20.117
+with download steps and
+a way to check the files.
+
+00:02:21.067 --> 00:02:25.332
+Following the Agent's guide,
+I connect to Nano4 with FileZilla,
+
+00:02:25.332 --> 00:02:30.679
+open the results folder, and select all
+fifteen zip files, about 3.8 gigabytes.
+
+00:02:30.679 --> 00:02:34.267
+After two-factor authentication,
+the download starts.
+
+00:02:35.200 --> 00:02:36.505
+Now for the results!
+
+00:02:36.505 --> 00:02:40.158
+First, whole-brain segmentation:
+for all eight patients,
+
+00:02:40.158 --> 00:02:44.854
+FreeSurfer automatically labels the
+cortical and subcortical structures.
+
+00:02:45.800 --> 00:02:49.295
+Next, registration:
+two scans of the same patient.
+
+00:02:49.295 --> 00:02:52.999
+Before registration,
+the edges jump around; after it,
+
+00:02:52.999 --> 00:02:58.311
+they line up almost perfectly, and the
+residual error drops by 84.6 percent.
+
+00:02:59.267 --> 00:03:02.505
+Then we screen the brain
+regions linked to epilepsy.
+
+00:03:02.505 --> 00:03:07.174
+A coronal slice through the medial
+temporal lobe highlights the hippocampal
+
+00:03:07.174 --> 00:03:10.225
+subfields, the amygdala,
+and the thalamic nuclei.
+
+00:03:10.225 --> 00:03:13.899
+In both patients shown,
+the left side is clearly atrophied.
+
+00:03:14.833 --> 00:03:18.827
+Lining up the left-right asymmetry
+index for all eight patients,
+
+00:03:18.827 --> 00:03:22.945
+the red dashed lines mark the
+plus-or-minus ten percent threshold.
+
+00:03:22.945 --> 00:03:26.065
+Structures beyond it are
+where doctors look first.
+
+00:03:26.065 --> 00:03:29.934
+Remember: this supports interpretation;
+it is not a diagnosis.
+
+00:03:30.900 --> 00:03:34.189
+To sum up: all fifteen
+main analyses are complete,
+
+00:03:34.189 --> 00:03:38.795
+each producing four core image files,
+packaged into fifteen zip files.
+
+00:03:39.733 --> 00:03:43.377
+From a one-sentence request
+to results you can verify:
+
+00:03:43.377 --> 00:03:47.224
+this is AI-Agent-driven research
+computing on NCHC's HPC.
+
+00:03:47.224 --> 00:03:50.126
+Thanks for watching,
+and see you next time!
+

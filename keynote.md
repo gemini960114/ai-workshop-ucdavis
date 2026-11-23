@@ -3,7 +3,7 @@
 **Multiple agents, cross-checked — then build your own Skill.**
 
 > 📥 **Download PowerPoint Slides (.pptx)**: [Bring-the-AI-Agent-to-your-laptop-as-your-research-partner.pptx](https://github.com/gemini960114/ai-workshop-ucdavis/raw/main/PPTX/Bring-the-AI-Agent-to-your-laptop-as-your-research-partner.pptx) (or via [Google Drive](https://reurl.cc/5XjzlG))
-> 💡 Use the **interactive 21-slide player** below (supports **← / → arrow keys**) or scroll down to read the full 5-part web version with embedded demo videos and demo prompts.
+> 💡 Use the **interactive 16-slide player** below (supports **← / → arrow keys**) or scroll down to read the full 5-part web version with embedded explainer videos, demo videos, and demo prompts.
 
 <!-- DECK_PLAYER -->
 
@@ -51,77 +51,52 @@ NCHC provides supercomputers to physicians, scientists, and researchers. Here is
 
 ---
 
-## Part 2: Part 1 of the Agent — Inside the Brain: Generative AI, Word Chain & Hallucinations (Slides 5–10)
+## Part 2: Part 1 of the Agent — Inside the Brain: Generative AI, Word Chain & Hallucinations (Slides 5–6)
 
 ### Slide 5 · What Is Generative AI? (`Part 1: Inside the Agent's Brain — and why it can make mistakes`)
 
 ![Slide 5](docs/public/slides/slide-05.png)
 
-You just saw an AI agent analyze 15 brain MRI scans from one sentence. How does that actually work? An AI agent has two parts: a brain that thinks, and tools that act. First, let's look inside the brain—generative AI. In one sentence, it is a very powerful word-chain game. Let me show you how it works, and why it can sometimes make mistakes.
+#### 🎬 Explainer Video (2:36): Inside the Agent's Brain — Word Chain, Tokens, Probability & Hallucinations
+
+<!-- GENAI_VIDEO -->
+
+You just saw an AI agent analyze 15 brain MRI scans from one sentence. How does that actually work? An AI agent has two parts: a brain that thinks, and tools that act. In this video, we look inside Part 1—the brain, generative AI:
+
+- **Tokens & Encoding Dictionary**: Computers cannot read words, only numbers. Every word is turned into a number using a dictionary (GPT-3 has ~50,000 tokens, GPT-4 ~100,000, and GPT-5 ~150,000). For example, `"Taiwan's best"` becomes three numbers (`42168, 995, 11571`), the language model predicts the next number (`14221`), and we decode it back into `"food"`.
+- **Word Chain (Next-Token Prediction)**: When we ask *"What is Taiwan's tallest mountain?"*, the model predicts `"Yu"`, appends it, predicts `"shan"`, and finally predicts `END`.
+- **Rolling the Dice & Hallucinations**: At each step, the model scores thousands of candidate words and rolls the dice among the likely ones. That is why answers differ every time—and why an unlucky roll (such as picking `"Ali"` instead of `"Yu"` and confidently writing `"Alishan"`) produces a **hallucination**. AI sounds confident, so we must always check its work.
 
 ---
 
-### Slide 6 · Word Chain (Next Token Prediction)
+### Slide 6 · Artificial Analysis Intelligence Index (2026-11-12)
 
 ![Slide 6](docs/public/slides/slide-06.png)
 
-Computers cannot read words, only numbers. So every word is turned into a number using a dictionary. These pieces are called tokens. GPT-3's dictionary has about 50 thousand tokens, GPT-4 about 100 thousand, and GPT-5 about 150 thousand. In this example, 'Taiwan's best' becomes three numbers. The model predicts the next number, 14221, and we decode it back into a word: 'food'.
+Here is the chart from the end of the video, ranking many models with one independent index dated 2026-11-12. Notice that the top scores come from a few different companies, and they are close to each other. Open-weight models, whose weights anyone can download, sit a bit lower. There is no single winner for every job—so remember our rule: use more than one model, and let them check each other.
 
 ---
 
-### Slide 7 · Generative AI Creates Content by Word Chain!
+## Part 3: Part 2 of the Agent — Giving the Brain a Suit of Tools to Act (Slides 7–8)
+
+### Slide 7 · So What Is Agentic AI? (`Part 2: Giving the Brain a Suit of Tools to Act`)
 
 ![Slide 7](docs/public/slides/slide-07.png)
 
-So generative AI answers by playing word chain. We ask, 'What is Taiwan's tallest mountain?' The model predicts 'Yu'. We add 'Yu' to the question and ask again. It predicts 'shan'. We add it again, and now it predicts END, so it stops. It writes one small piece at a time.
+#### 🎬 Explainer Video (1:59): Brain + Suit = Agent — How Agentic AI Works in a Loop
+
+<!-- AGENTIC_VIDEO -->
+
+Now we know how the brain works: it plays word chain, and different models have different strengths. But a brain alone—like a web chatbot—only talks. It cannot open your files, run your programs, or check the results.
+
+- **Brain + Suit = Agent**: Think of Iron Man. Tony Stark is the brain, and the Iron Man suit gives him tools and power. In AI, the LLM (such as ChatGPT, Gemini, or Claude) is the brain, and the agentic environment (Codex, Antigravity, or Claude Code) is the suit that lets the brain open files, run code, and fix its own mistakes.
+- **The Agent Loop**: You give the agent a request $\rightarrow$ the model thinks and asks *"Do I need a tool?"* $\rightarrow$ if yes, it runs the tool, inspects the result (or error), adjusts, and runs again until the job is done.
 
 ---
 
-### Slide 8 · Why Are the Answers Different Every Time?
+### Slide 8 · Three Agentic Tools: Don't Trust Just One
 
 ![Slide 8](docs/public/slides/slide-08.png)
-
-At each step, the model does not have just one choice. It scores thousands of possible next words. The bars show how likely each word is. Then the model rolls a dice among the likely ones. So the answer could start with 'Yu', 'It', or 'The'.
-
----
-
-### Slide 9 · Why Answers Differ Every Time and May Include Hallucinations
-
-![Slide 9](docs/public/slides/slide-09.png)
-
-This is why the answer is different every time. It is also why mistakes can appear. We call them hallucinations. One unlucky word can be chosen, and every later word follows it. The lesson is simple: AI sounds confident, but we must check its work.
-
----
-
-### Slide 10 · Artificial Analysis Intelligence Index (2026-11-12)
-
-![Slide 10](docs/public/slides/slide-10.png)
-
-How do we know which AI is good? This chart ranks many models with one independent index, dated 2026-11-12. Notice that the top scores come from a few different companies, and they are close to each other. Open-weight models, whose weights anyone can download, sit a bit lower. There is no single winner for every job. Keep this in mind for later: use more than one model.
-
----
-
-## Part 3: Part 2 of the Agent — Giving the Brain a Suit of Tools to Act (Slides 11–13)
-
-### Slide 11 · So What Is Agentic AI? (`Part 2: Giving the Brain a Suit of Tools to Act`)
-
-![Slide 11](docs/public/slides/slide-11.png)
-
-Now we know how the brain works: it plays word chain, and different models have different strengths. But a brain alone—like a web chatbot—only talks. How did our supercomputer demo actually open files and run programs? That brings us to Part 2: Agentic AI—giving the brain a suit of tools so it can act: reading files, running programs, and checking results. Let's see how it is built.
-
----
-
-### Slide 12 · What Is Agentic? Brain + Tools = AI Agent
-
-![Slide 12](docs/public/slides/slide-12.png)
-
-Think of Iron Man. Tony Stark is the brain. The Iron Man suit gives him tools and power. Together they make a hero. In AI, ChatGPT is the brain, and Codex is the suit. The suit lets the brain open files, run code, and fix its own mistakes. The agent works in a loop: think, use a tool, look at the result, and think again. Brain plus tools makes an agent.
-
----
-
-### Slide 13 · Three Agentic Tools: Don't Trust Just One
-
-![Slide 13](docs/public/slides/slide-13.png)
 
 | Brain (LLM) | Suit (Agentic Tool) | Superhero Analogy |
 | --- | --- | --- |
@@ -129,23 +104,23 @@ Think of Iron Man. Tony Stark is the brain. The Iron Man suit gives him tools an
 | **Gemini** | **Antigravity** | 🛡️ Captain America |
 | **Claude** | **Claude Code** | 🔮 Doctor Strange |
 
-There are three big families. Each one pairs a brain with a suit, just like the superheroes on this slide. ChatGPT with Codex is Iron Man. Gemini with Antigravity is Captain America. Claude with Claude Code is Doctor Strange. Each hero has strengths and blind spots. So here is our rule for this course: do not trust just one hero. In our hands-on units today, we will mainly use Antigravity and Claude Code on your laptop—letting one agent do the work and another agent check it.
+Here are the three big families from the video—each pairing a brain with a suit of tools: ChatGPT with Codex is Iron Man, Gemini with Antigravity is Captain America, and Claude with Claude Code is Doctor Strange. Each hero has strengths and blind spots, so do not trust just one hero. In our hands-on units today, we will mainly use Antigravity and Claude Code on your laptop—letting one agent do the work and another agent check it.
 
 ---
 
-## Part 4: Bring the Agent's Brain into Your Laptop — Unit 00 (Slides 14–15)
+## Part 4: Bring the Agent's Brain into Your Laptop — Unit 00 (Slides 9–10)
 
-### Slide 14 · How Can These AI Agents Do Research with You?
+### Slide 9 · How Can These AI Agents Do Research with You?
 
-![Slide 14](docs/public/slides/slide-14.png)
+![Slide 9](docs/public/slides/slide-09.png)
 
 At the start, we saw an agent run brain MRI analysis on a supercomputer. What about your everyday work on your own laptop? Researchers spend hours reading papers, turning data into Excel sheets and slides, processing routine documents, and checking results. So how can these agents work with you on your laptop? Two ideas. First, bring the agent's brain to your laptop. Second, use more than one agent and turn what works into reusable Skills. Let's start with a simple example in Unit 00.
 
 ---
 
-### Slide 15 · Unit 00 | Cloud vs. Local: One Paper, Two Ways to Use AI
+### Slide 10 · Unit 00 | Cloud vs. Local: One Paper, Two Ways to Use AI
 
-![Slide 15](docs/public/slides/slide-15.png)
+![Slide 10](docs/public/slides/slide-10.png)
 
 - 📖 **Written Guide**: [Open Unit 00: Cloud vs. Local](00-ai-workshop-openai/)
 - 🎬 **YouTube Video**: <https://www.youtube.com/watch?v=sLCBtmZAz2c>
@@ -176,11 +151,11 @@ Revise it according to your suggestions and save it under a new file name
 
 ---
 
-## Part 5: From Tool to Skill — Your Learning Path & Units 01–04 (Slides 16–21)
+## Part 5: From Tool to Skill — Your Learning Path & Units 01–04 (Slides 11–16)
 
-### Slide 16 · 🧭 Your Learning Path (`From Tool to Skill · Units 01–04`)
+### Slide 11 · 🧭 Your Learning Path (`From Tool to Skill · Units 01–04`)
 
-![Slide 16](docs/public/slides/slide-16.png)
+![Slide 11](docs/public/slides/slide-11.png)
 
 1. **[Unit 01 · Getting Started with Antigravity](01-ai-workshop-agy/)** (`TOOL`) — The tool: an AI agent you talk to in plain language.
 2. **[Unit 02 · Frontend Design](02-ai-workshop-frontend-design/)** (`SKILL`) — Use a skill: same request, a better-designed result.
@@ -191,9 +166,9 @@ Here is the path for the rest of the course. We start with the tool: Unit 01, an
 
 ---
 
-### Slide 17 · 🧰 Unit 01 | Getting Started with Antigravity (`Step 1 of 4 · The Tool`)
+### Slide 12 · 🧰 Unit 01 | Getting Started with Antigravity (`Step 1 of 4 · The Tool`)
 
-![Slide 17](docs/public/slides/slide-17.png)
+![Slide 12](docs/public/slides/slide-12.png)
 
 - 📖 **Written Guide**: [Open Unit 01: Getting Started with Antigravity](01-ai-workshop-agy/)
 - 🎬 **YouTube Video**: <https://youtu.be/72oCyg8MDLg>
@@ -217,9 +192,9 @@ In this folder, help me build a "Memory Match" card game using the simplest Vite
 
 ---
 
-### Slide 18 · 🎨 Unit 02 | Frontend Design (`Step 2 of 4 · Skills`)
+### Slide 13 · 🎨 Unit 02 | Frontend Design (`Step 2 of 4 · Skills`)
 
-![Slide 18](docs/public/slides/slide-18.png)
+![Slide 13](docs/public/slides/slide-13.png)
 
 - 📖 **Written Guide**: [Open Unit 02: Frontend Design](02-ai-workshop-frontend-design/)
 - 🎬 **YouTube Video**: <https://youtu.be/86bsVsh2tXw>
@@ -243,9 +218,9 @@ Which Skills did you use in this case?
 
 ---
 
-### Slide 19 · 📄 Unit 03 | Office Document Processing (`Step 3 of 4 · More Skills`)
+### Slide 14 · 📄 Unit 03 | Office Document Processing (`Step 3 of 4 · More Skills`)
 
-![Slide 19](docs/public/slides/slide-19.png)
+![Slide 14](docs/public/slides/slide-14.png)
 
 - 📖 **Written Guide**: [Open Unit 03: Office Document Processing](03-ai-workshop-office-skills/)
 - 🎬 **YouTube Video**: <https://youtu.be/sOIg3osiPU4>
@@ -269,9 +244,9 @@ Based on output/pmi.xlsx, write a Word analysis report saved as output/pmi-repor
 
 ---
 
-### Slide 20 · 🧾 Unit 04 | Voucher OCR to Excel (`Step 4 of 4 · Build Your Own Skill`)
+### Slide 15 · 🧾 Unit 04 | Voucher OCR to Excel (`Step 4 of 4 · Build Your Own Skill`)
 
-![Slide 20](docs/public/slides/slide-20.png)
+![Slide 15](docs/public/slides/slide-15.png)
 
 - 📖 **Written Guide**: [Open Unit 04: Voucher OCR to Excel](04-ai-workshop-voucher-ocr/)
 - 🎬 **YouTube Video**: <https://youtu.be/Kq0HLK2kIQg>
@@ -298,9 +273,9 @@ Please cross-check the PDFs in example_deid/ against record.xlsx and verify whet
 
 ---
 
-### Slide 21 · Thank You for Your Attention & Q&A
+### Slide 16 · Thank You for Your Attention & Q&A
 
-![Slide 21](docs/public/slides/slide-21.png)
+![Slide 16](docs/public/slides/slide-16.png)
 
 - 📥 **Download Slides (.pptx)**: [Bring-the-AI-Agent-to-your-laptop-as-your-research-partner.pptx](https://github.com/gemini960114/ai-workshop-ucdavis/raw/main/PPTX/Bring-the-AI-Agent-to-your-laptop-as-your-research-partner.pptx) (or via [Google Drive](https://reurl.cc/5XjzlG))
 

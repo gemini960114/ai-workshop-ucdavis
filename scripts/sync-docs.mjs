@@ -77,6 +77,14 @@ const keynoteSrc = rewriteLinks(readFileSync(join(ROOT, 'keynote.md'), 'utf8'), 
   )
   .replace(
     '<!-- NANO4_VIDEO -->',
-    '<video style="width:100%;aspect-ratio:16/9;border-radius:8px;margin:12px 0;border:1px solid var(--vp-c-divider);" :src="withBase(\'/videos/nano4-mri-demo.mp4\')" :poster="withBase(\'/slides/slide-04.png\')" controls preload="metadata"></video>'
+    '<video style="width:100%;aspect-ratio:16/9;border-radius:8px;margin:12px 0;border:1px solid var(--vp-c-divider);" :src="withBase(\'/videos/nano4-mri-demo.mp4\')" :poster="withBase(\'/slides/slide-04.png\')" controls preload="metadata"><track kind="captions" srclang="en" label="English" :src="withBase(\'/videos/nano4-mri-demo.en.vtt\')" default /></video>'
+  )
+  .replace(
+    '<!-- GENAI_VIDEO -->',
+    '<video style="width:100%;aspect-ratio:16/9;border-radius:8px;margin:12px 0;border:1px solid var(--vp-c-divider);" :src="withBase(\'/videos/genai-brain.mp4\')" :poster="withBase(\'/slides/slide-05.png\')" controls preload="metadata"><track kind="captions" srclang="en" label="English" :src="withBase(\'/videos/genai-brain.en.vtt\')" default /></video>'
+  )
+  .replace(
+    '<!-- AGENTIC_VIDEO -->',
+    '<video style="width:100%;aspect-ratio:16/9;border-radius:8px;margin:12px 0;border:1px solid var(--vp-c-divider);" :src="withBase(\'/videos/agentic-tools.mp4\')" :poster="withBase(\'/slides/slide-07.png\')" controls preload="metadata"><track kind="captions" srclang="en" label="English" :src="withBase(\'/videos/agentic-tools.en.vtt\')" default /></video>'
   )
 write('docs/guide', 'keynote', keynoteSrc)
