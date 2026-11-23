@@ -21,8 +21,8 @@ hero:
 
 features:
   - icon: 🎤
-    title: Keynote Presentation (Web Slides & Notes)
-    details: Browse all 21 slides from "Bring the AI Agent to your laptop as your research partner" with interactive slide player, full speaker notes, demo prompts, and the Nano4 15-Brain-MRI supercomputer demo video.
+    title: Keynote Presentation (21 Web Slides)
+    details: Browse all 21 slides from "Bring the AI Agent to your laptop as your research partner" with interactive slide player, full explanations, demo prompts, and the Nano4 15-Brain-MRI supercomputer demo video.
     link: /guide/keynote
     linkText: Open Keynote Slides
   - icon: ☁️

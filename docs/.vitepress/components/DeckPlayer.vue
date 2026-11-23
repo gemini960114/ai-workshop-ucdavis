@@ -328,10 +328,9 @@ onUnmounted(() => window.removeEventListener('keydown', onKeydown))
     </div>
 
     <div class="deck-notes">
-      <div class="deck-notes-label">🎙️ Speaker Notes — Slide {{ current.num }}</div>
       <p class="deck-notes-text">{{ current.notes }}</p>
       <div v-if="current.prompts" class="deck-prompts">
-        <div class="deck-prompts-label">📋 Demo Prompts (in Speaker Notes)</div>
+        <div class="deck-prompts-label">📋 Demo Prompts</div>
         <pre class="deck-prompts-pre">{{ current.prompts }}</pre>
       </div>
     </div>
