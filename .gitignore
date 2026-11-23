@@ -35,3 +35,5 @@ __pycache__/
 04-ai-workshop-voucher-ocr/output/
 04-ai-workshop-voucher-ocr/output_*/
 04-ai-workshop-voucher-ocr/example/
+
+docs/.vitepress/.temp/
