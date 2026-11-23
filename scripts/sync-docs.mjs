@@ -77,6 +77,6 @@ const keynoteSrc = rewriteLinks(readFileSync(join(ROOT, 'keynote.md'), 'utf8'), 
   )
   .replace(
     '<!-- NANO4_VIDEO -->',
-    '<video style="width:100%;aspect-ratio:16/9;border-radius:8px;margin:12px 0;border:1px solid var(--vp-c-divider);" :src="withBase(\'/videos/nano4-mri-demo.mp4\')" :poster="withBase(\'/slides/slide-06.png\')" controls preload="metadata"></video>'
+    '<video style="width:100%;aspect-ratio:16/9;border-radius:8px;margin:12px 0;border:1px solid var(--vp-c-divider);" :src="withBase(\'/videos/nano4-mri-demo.mp4\')" :poster="withBase(\'/slides/slide-04.png\')" controls preload="metadata"></video>'
   )
 write('docs/guide', 'keynote', keynoteSrc)
