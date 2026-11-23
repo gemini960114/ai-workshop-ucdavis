@@ -6,7 +6,7 @@ Bring an AI Agent onto your own laptop and project folders: chat in plain langua
 
 > 📖 **Online Workshop Website**: <https://gemini960114.github.io/ai-workshop-ucdavis/>
 > 🎤 **Keynote Presentation (Web Format, 21 Slides + Notes + Demo Videos)**: [Open Keynote Slides](keynote.md)
-> 📥 **Download Keynote Slide Deck (.pptx)**: <https://reurl.cc/5XjzlG>
+> 📥 **Download Keynote Slide Deck (.pptx)**: [Bring-the-AI-Agent-to-your-laptop-as-your-research-partner.pptx](https://github.com/gemini960114/ai-workshop-ucdavis/raw/main/PPTX/Bring-the-AI-Agent-to-your-laptop-as-your-research-partner.pptx) (or via [Google Drive](https://reurl.cc/5XjzlG))
 
 ## Clone the Repository
 
@@ -37,7 +37,7 @@ Each hands-on unit includes a downloadable slide deck (with speaker notes) and a
 
 | Unit | Title | Unit Slides (.pptx) | Tutorial Video (YouTube) |
 | :---: | --- | --- | --- |
-| **Keynote** | Bring the AI Agent to Your Laptop as Your Research Partner | [Web Slides](keynote.md) · [Download PPTX](https://reurl.cc/5XjzlG) | Embedded in [Keynote Page](keynote.md) |
+| **Keynote** | Bring the AI Agent to Your Laptop as Your Research Partner | [Web Slides](keynote.md) · [Download PPTX](https://github.com/gemini960114/ai-workshop-ucdavis/raw/main/PPTX/Bring-the-AI-Agent-to-your-laptop-as-your-research-partner.pptx) | Embedded in [Keynote Page](keynote.md) |
 | **00** | Cloud vs. Local — One Paper, Two Ways to Use AI | [00-cloud-vs-local.en.pptx](https://github.com/gemini960114/ai-workshop-research/raw/main/PPTX/00-cloud-vs-local.en.pptx) | [Watch on YouTube](https://youtu.be/sLCBtmZAz2c) (2:00) |
 | **01** | Getting Started with Antigravity | [01-antigravity.en.pptx](https://github.com/gemini960114/ai-workshop-research/raw/main/PPTX/01-antigravity.en.pptx) | [Watch on YouTube](https://youtu.be/72oCyg8MDLg) (3:59) |
 | **02** | Frontend Design (`frontend-design` Skill) | [02-frontend-design.en.pptx](https://github.com/gemini960114/ai-workshop-research/raw/main/PPTX/02-frontend-design.en.pptx) | [Watch on YouTube](https://youtu.be/86bsVsh2tXw) (3:02) |

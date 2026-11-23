@@ -2,7 +2,7 @@
 
 **Multiple agents, cross-checked — then build your own Skill.**
 
-> 📥 **Download PowerPoint Slides (.pptx)**: <https://reurl.cc/5XjzlG>
+> 📥 **Download PowerPoint Slides (.pptx)**: [Bring-the-AI-Agent-to-your-laptop-as-your-research-partner.pptx](https://github.com/gemini960114/ai-workshop-ucdavis/raw/main/PPTX/Bring-the-AI-Agent-to-your-laptop-as-your-research-partner.pptx) (or via [Google Drive](https://reurl.cc/5XjzlG))
 > 💡 Use the **interactive 21-slide player** below (supports **← / → arrow keys**) or scroll down to read the full 5-part web version with embedded demo videos, speaker notes, and demo prompts.
 
 <!-- DECK_PLAYER -->
@@ -322,7 +322,7 @@ Please cross-check the PDFs in example_deid/ against record.xlsx and verify whet
 
 ![Slide 21](docs/public/slides/slide-21.png)
 
-- 📥 **Download Slides (.pptx)**: <https://reurl.cc/5XjzlG>
+- 📥 **Download Slides (.pptx)**: [Bring-the-AI-Agent-to-your-laptop-as-your-research-partner.pptx](https://github.com/gemini960114/ai-workshop-ucdavis/raw/main/PPTX/Bring-the-AI-Agent-to-your-laptop-as-your-research-partner.pptx) (or via [Google Drive](https://reurl.cc/5XjzlG))
 
 > 🎙️ **Speaker Notes**:
 > Thank you for listening. If you remember only one thing today, remember this: use more than one agent, and always check the result. Scan the QR code to download the slides, and now let's take your questions.
